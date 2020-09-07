@@ -1,3 +1,8 @@
+/*
+ * Project Libra cgo usage
+ * Author: A. Yasuda
+ */
+
 package main
 
 import (
