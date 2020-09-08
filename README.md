@@ -22,7 +22,7 @@ make
 ```
 upon the compiling, cmake will generate a c-shared library, a header file, the libra library, and a test artifact. You may verify the compiing detail in [libra ci](https://travis-ci.com/ge-edge/libra)
 
-## Libra Nodes May Interface Other BC Brands 
+## Libra Nodes Interface Some Popular BC Brands
 ### Bitcoin Core
 Bitcoin is a consensus network that enables a new payment system and a completely digital money. It is the first decentralized peer-to-peer payment network that is powered by its users with no central authority or middlemen. From a user perspective, Bitcoin is pretty much like cash for the Internet. Bitcoin can also be seen as the most prominent triple entry bookkeeping system in existence.
 
