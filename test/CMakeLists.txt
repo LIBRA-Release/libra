@@ -9,7 +9,7 @@ add_library(common-lib SHARED IMPORTED GLOBAL)
 set_target_properties(
   common-lib
   PROPERTIES
-  IMPORTED_LOCATION /home/pi/ged/libra//lib/agent-clib.so
+  IMPORTED_LOCATION /home/pi/ged/libra/lib/crypto.so
 )
 
 add_executable(libra test_libra.cpp)

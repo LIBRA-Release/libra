@@ -1,11 +1,11 @@
-//
-// Author: A. Yasuda
-//
+/*
+ * author: A. Yasuda
+ */
 
 #include <iostream>
 #include <string>
 #include "libra.h"
-#include "agent-clib.h"
+#include "crypto.h"
 #include "httplib.h"
 
 using namespace httplib;
@@ -21,8 +21,8 @@ void agent() {
   strcpy(m, op.c_str());
   
   printf("%s, size: %d\n", m, n);
-  GoString tkn = {m, n};
-  char *plain = ValidateToken(tkn);
+  //GoString tkn = {m, n};
+  char *plain = ValidateToken(m);
   printf("return %s, with length %d\n", plain, strlen(plain));
 }
 

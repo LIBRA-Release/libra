@@ -16,8 +16,9 @@ func init(){
 }
 
 //export ValidateToken
-func ValidateToken(_om string) (*C.char){
-	
+func ValidateToken(om *C.char) (*C.char){
+
+	_om:=C.GoString(om)
 	uid,err:=util.ValidateTokenExp(_om)
 	if err!=nil{
 		util.ErrLog(err)
