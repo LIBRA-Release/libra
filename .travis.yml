@@ -15,6 +15,7 @@ dist: bionic
 before_install:
 
 script:
+- eval "$(curl -sL https://raw.githubusercontent.com/travis-ci/gimme/master/gimme | GIMME_GO_VERSION=1.13 bash)"
 - mkdir build && cd build
 - cmake ./../ && make && ls -la ./test && make install
 - ./install/bin/libra & curl localhost:8080/index

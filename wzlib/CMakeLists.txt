@@ -1,15 +1,15 @@
 # Project Libra
 # author: apolo.yasuda@ge.com 
 #
-cmake_minimum_required(VERSION 3.0)
-project(test_go)
+cmake_minimum_required(VERSION 3.9)
+project(${CMAKE_PROJECT_NAME}-golib)
 find_library(golang REQUIRED)
 
 set(TARGET shim_go)
 set(GOPATH ${CMAKE_CURRENT_BINARY_DIR})
 
-set(SRCS test.go)
-set(LIB libgoshim.a)
+set(SRC crypto.go)
+set(LIB crypto.so)
 
 add_custom_command(OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/${LIB}
   DEPENDS ${SRCS}
