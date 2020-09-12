@@ -1,7 +1,7 @@
 [![Build Status](https://travis-ci.com/ge-edge/libra.svg?branch=v0.1.0-reiwa)](https://travis-ci.com/ge-edge/libra)
 
 # libra
-General Electric Edge Subscription C++ Library/Tools
+Libra (Linear-Inversion Blockchain Research Assembly) is a subscription library implemented with De-centralised-logic approach.
 
 ## Requirement
 - CMake
