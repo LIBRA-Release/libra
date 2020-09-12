@@ -1,7 +1,7 @@
 [![Build Status](https://travis-ci.com/ge-edge/libra.svg?branch=v0.1.0-reiwa)](https://travis-ci.com/ge-edge/libra)
 
 # libra
-Libra (Linear-Inversion Blockchain Research Assembly) is a subscription library implemented with De-centralised-logic approach.
+The project libra (Linear-Inversion Blockchain Research Assembly) is a subscription library implemented with De-centralised-logic approach.
 
 ## Requirement
 - CMake
