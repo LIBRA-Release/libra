@@ -33,6 +33,8 @@ upon the compiling, cmake will generate a c-shared library, a header file, the l
 - [Lucidcharts (Design, Diagram)](https://app.lucidchart.com/invitations/accept/ea4f9e3e-349a-4044-af09-264aa0cc5ec7)
 - [Internal Resource (Slides, Licenses, Legal, etc.)](https://ge.box.com/s/z7czuln44wvk898t513jwpl6t3q0wguz)
 
+## License
+Developer License is free to acquire for beta usage and for development purpose in [certifactory](https://github.com/EC-Release/certifactory/tree/beta).
 
 ## Libra Nodes Interface For Popular Brands
 - Bitcoin Core[1]
