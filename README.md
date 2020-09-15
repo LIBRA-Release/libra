@@ -3,6 +3,13 @@
 # libra
 The project libra (Linear-Inversion Blockchain Research Assembly) is a subscription library implemented with De-centralised-logic approach.
 
+## Table
+* [Requirement](#requirement) 
+* [How to compile](#how-to-compile) 
+* [Resources](#resources)
+* [Libra Nodes Interface For Popular Brands](#libra-nodes-interface-for-popular-brands)
+* [Reference](#reference)
+
 ## Requirement
 - CMake
 - GNU g++
@@ -22,18 +29,16 @@ make
 ```
 upon the compiling, cmake will generate a c-shared library, a header file, the libra library, and a test artifact. You may verify the compiing detail in [libra ci](https://travis-ci.com/ge-edge/libra)
 
-## Libra Nodes Interface Some Popular BC Brands
-### Bitcoin Core
-Bitcoin is a consensus network that enables a new payment system and a completely digital money. It is the first decentralized peer-to-peer payment network that is powered by its users with no central authority or middlemen. From a user perspective, Bitcoin is pretty much like cash for the Internet. Bitcoin can also be seen as the most prominent triple entry bookkeeping system in existence.
+## Resources
+- [Lucidcharts (Design, Diagram](https://app.lucidchart.com/invitations/accept/ea4f9e3e-349a-4044-af09-264aa0cc5ec7)
+- [Internal Resource (Slides, Licenses, Legal, etc.)](https://ge.box.com/s/z7czuln44wvk898t513jwpl6t3q0wguz)
 
-### Hyperledger
-Hyperledger is an open source community focused on developing a suite of stable frameworks, tools and libraries for enterprise-grade blockchain deployments. Hyperledger topology is currently adopted and monetised by companies such as Oracle, IBM, etc.
 
-### AWS BC Service
-Amazon trademark Blockchain service provision both centalised and de-centralised governmentship. The service partner can also promote their service amongst the subscribers in the AWS marketplace.
-
-### Azure BC Service
-Azure Blockchain Service is a fully managed ledger service that enables users the ability to grow and operate blockchain networks at scale in Azure
+## Libra Nodes Interface For Popular Brands
+- Bitcoin Core[1]
+- Hyperledger[2]
+- AWS BC Service[3]
+- Azure BC Service[4]
 
 ## Marketplace
 Libra Transactional Node owners may share their services at global scale, it allows the owners to produtise or monetise their services over the node. 
@@ -44,5 +49,13 @@ Libra utilised [the slack channel (look for #libra and request join)](enterprise
 ## Project Management
 Libra invites contributors whoever interested in managing the project scope, and/or customer-relation to [the current Salesforce CRM development](https://na139.salesforce.com/home/home.jsp?tsid=02u4W000001HD2F).
 
+## Reference
+<sup>[1]Bitcoin is a consensus network that enables a new payment system and a completely digital money. It is the first decentralized peer-to-peer payment network that is powered by its users with no central authority or middlemen. From a user perspective, Bitcoin is pretty much like cash for the Internet. Bitcoin can also be seen as the most prominent triple entry bookkeeping system in existence.</sup>
+
+<sup>[2]Hyperledger is an open source community focused on developing a suite of stable frameworks, tools and libraries for enterprise-grade blockchain deployments. Hyperledger topology is currently adopted and monetised by companies such as Oracle, IBM, etc.</sup>
+
+<sup>[3]Amazon trademark Blockchain service provision both centalised and de-centralised governmentship. The service partner can also promote their service amongst the subscribers in the AWS marketplace.</sup>
+
+<sup>[4]Azure Blockchain Service is a fully managed ledger service that enables users the ability to grow and operate blockchain networks at scale in Azure</sup>
 
 <sup>Author: A. Yasuda. Rev: v0.1.0</sup>
