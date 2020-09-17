@@ -49,6 +49,8 @@ Libra Transactional Node owners may share their services at global scale, it all
 ## Collaboration
 Libra utilised [the slack channel (look for #libra and request join)](enterprisecon-j2w6229.slack.com) for better communication across the board.
 
+Libra is also avaialble [on twitter](https://twitter.com/LibraRelease)
+
 ## Project Management
 Libra invites contributors whoever interested in managing the project scope, and/or customer-relation to [the current Salesforce CRM development](https://na139.salesforce.com/home/home.jsp?tsid=02u4W000001HD2F).
 
