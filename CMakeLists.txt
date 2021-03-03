@@ -23,6 +23,8 @@ include_directories(${WZLIB_GO_DIR})
 # cgo library folder code
 add_subdirectory(wzlib)
 
+add_subdirectory(lib/linux)
+
 # Common code, packaged as a library
 add_subdirectory(common)
 
