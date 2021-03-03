@@ -1,0 +1,28 @@
+name: reiwa-ci
+on:
+  #push:
+  #  branches: [ v0.1.0-reiwa ]
+  pull_request:
+    branches: [ v0.1.0-reiwa ]
+    types: [closed, opened, synchronize]
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    if: "!contains(github.event.head_commit.message, '[skip ci]')"
+    environment: reiwa
+    #env:
+    steps:
+      - uses: actions/checkout@v2
+      - name: bootstrap reiwa
+        id: bootstrap
+        #env:
+        run: |
+          - mkdir build && cd build
+          - cmake ./../ && make && ls -la ./test && make install
+          - ./install/bin/libra & curl localhost:8080/index
+      - name: pr merged
+        if: github.event_name == 'pull_request' && github.event.action == 'closed' && github.event.pull_request.merged == true
+        id: pr-merged
+        run: |
+          echo pr has been merged and closed
