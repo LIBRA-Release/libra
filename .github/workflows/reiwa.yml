@@ -14,8 +14,8 @@ jobs:
     #env:
     steps:
       - uses: actions/checkout@v2
-      - name: bootstrap reiwa
-        id: bootstrap
+      - name: test reiwa build
+        id: reiwa-build
         #env:
         run: |
           - mkdir build && cd build
