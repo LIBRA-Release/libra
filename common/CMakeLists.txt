@@ -8,6 +8,6 @@ set(LIBRA_LIB
         lib/linux)       
 
 add_library(common STATIC
-        ${LIBRA_LIB} ${LIBRA_SRC} ${CMAKE_THREAD_LIBS_INIT})
+        ${LIBRA_SRC} ${LIBRA_LIB} ${CMAKE_THREAD_LIBS_INIT})
       
 install(TARGETS common DESTINATION lib)
