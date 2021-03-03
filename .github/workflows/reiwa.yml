@@ -18,9 +18,9 @@ jobs:
         id: reiwa-build
         #env:
         run: |
-          - mkdir build && cd build
-          - cmake ./../ && make && ls -la ./test && make install
-          - ./install/bin/libra & curl localhost:8080/index
+          mkdir build && cd build
+          cmake ./../ && make && ls -la ./test && make install
+          ./install/bin/libra & curl localhost:8080/index
       - name: pr merged
         if: github.event_name == 'pull_request' && github.event.action == 'closed' && github.event.pull_request.merged == true
         id: pr-merged
