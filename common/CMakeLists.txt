@@ -4,8 +4,6 @@ project(${CMAKE_PROJECT_NAME}-common)
 set(LIBRA_SRC
         src/libra.cpp)
 
-include_directories(lib/linux)      
-
 add_library(common STATIC
         ${LIBRA_SRC} ${CMAKE_THREAD_LIBS_INIT})
       
