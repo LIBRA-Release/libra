@@ -23,6 +23,7 @@ jobs:
         #env:
         run: |
           mkdir build && cd build
+          ls -la ./lib/linux
           cmake ./../ && make && ls -la ./test && make install
           ./install/bin/libra & curl localhost:8080/index
       - name: pr merged
