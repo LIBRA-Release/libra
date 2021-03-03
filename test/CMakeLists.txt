@@ -6,11 +6,11 @@ set(THREADS_PREFER_PTHREAD_FLAG ON)
 find_package(Threads REQUIRED)
 
 add_library(common-lib SHARED IMPORTED GLOBAL)
-#set_target_properties(
-#  common-lib
-#  PROPERTIES
-#  IMPORTED_LOCATION /home/pi/ged/libra/lib/crypto.so
-#)
+set_target_properties(
+  common-lib
+  PROPERTIES
+  IMPORTED_LOCATION lib/linux/crypto.so
+)
 
 add_executable(libra test_libra.cpp)
 
