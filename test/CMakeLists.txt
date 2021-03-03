@@ -9,7 +9,7 @@ add_library(common-lib SHARED IMPORTED GLOBAL)
 set_target_properties(
   common-lib
   PROPERTIES
-  IMPORTED_LOCATION "../lib/linux/crypto.so"
+  IMPORTED_LOCATION "lib/linux/crypto.so"
 )
 
 add_executable(libra test_libra.cpp)
