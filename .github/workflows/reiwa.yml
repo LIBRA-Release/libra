@@ -22,8 +22,9 @@ jobs:
         id: reiwa-build
         #env:
         run: |
-          mkdir build && cd build
           ls -la ./lib/linux
+          pwd
+          mkdir build && cd build
           cmake ./../ && make && ls -la ./test && make install
           ./install/bin/libra & curl localhost:8080/index
       - name: pr merged
