@@ -12,6 +12,6 @@ set(LIBRA_HDR
 add_library(common STATIC
         ${LIBRA_SRC} ${CMAKE_THREAD_LIBS_INIT})
         
-target_link_libraries(common PRIVATE ${CRYPTO_LIB})
+target_link_libraries(common ${CRYPTO_LIB})
 
 install(TARGETS common DESTINATION lib)
