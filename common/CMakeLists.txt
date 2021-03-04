@@ -16,7 +16,7 @@ set(LIBRA_HDR
 
 add_library(common STATIC
         ${LIBRA_SRC} ${CMAKE_THREAD_LIBS_INIT})
-message( ${CMAKE_THREAD_LIBS_INIT} )
+#message( ${CMAKE_THREAD_LIBS_INIT} )
         
 #target_link_libraries(common ${CMAKE_CURRENT_SOURCE_DIR}/../lib/linux/crypto.so)
 
