@@ -17,6 +17,6 @@ set(LIBRA_HDR
 add_library(common STATIC
         ${LIBRA_SRC} ${CMAKE_THREAD_LIBS_INIT})
         
-target_include_directories(common PRIVATE ${LIBRA_HDR})
+target_include_directories(common PRIVATE ${LIBRA_HDR} "./../lib/linux")
 
 install(TARGETS common DESTINATION lib)
