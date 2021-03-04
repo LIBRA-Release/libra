@@ -9,7 +9,7 @@ add_library(common-lib SHARED IMPORTED GLOBAL)
 set_target_properties(
   common-lib
   PROPERTIES
-  IMPORTED_LOCATION "/home/runner/work/libra/libra/lib/linux/crypto.so"
+  IMPORTED_LOCATION "../lib/linux/crypto.so"
 )
 
 set(CMAKE_INSTALL_RPATH_USE_LINK_PATH TRUE)
