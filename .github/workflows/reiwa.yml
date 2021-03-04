@@ -22,7 +22,6 @@ jobs:
         id: reiwa-build
         #env:
         run: |
-          export LD_LIBRARY_PATH=$(pwd)/lib/linux
         
           ls -la /home/runner/work/libra/libra/lib/linux/
           pwd
