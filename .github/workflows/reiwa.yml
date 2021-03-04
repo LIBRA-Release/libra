@@ -22,8 +22,9 @@ jobs:
         id: reiwa-build
         #env:
         run: |
-        
-          ls -la /home/runner/work/libra/libra/lib/linux/
+          cp lib/linux/crypto.h common/include
+          
+          ls -la common/include
           pwd
           mkdir build && cd build
           cmake ./../ && make && ls -la ./test && make install
