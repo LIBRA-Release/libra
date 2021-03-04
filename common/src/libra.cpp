@@ -5,7 +5,11 @@
 #include <iostream>
 #include <string>
 #include "libra.h"
-#include "crypto.h"
+
+extern "C" {
+  #include "crypto.h"
+}
+
 #include "httplib.h"
 
 using namespace httplib;
