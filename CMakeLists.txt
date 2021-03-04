@@ -8,14 +8,13 @@ set(CMAKE_CXX_STANDARD 20)
 
 set(CMAKE_INSTALL_PREFIX install)
 
-set(PROJECT_INCLUDE_DIR include)
+#set(PROJECT_INCLUDE_DIR include)
 set(PROJECT_SOURCE_DIR src)
 set(COMMON_INCLUDE_DIR common/include)
-#set(WZLIB_GO_DIR wzlib)
-#set(PROJECT_INCLUDE_WZLIB_DIR lib/linux)
+set(PROJECT_INCLUDE_WZLIB_DIR lib/linux)
 
-include_directories(${PROJECT_INCLUDE_DIR})
-#include_directories(${PROJECT_INCLUDE_WZLIB_DIR})
+#include_directories(${PROJECT_INCLUDE_DIR})
+include_directories(${PROJECT_INCLUDE_WZLIB_DIR})
 include_directories(${PROJECT_SOURCE_DIR})
 include_directories(${COMMON_INCLUDE_DIR})
 #include_directories(${WZLIB_GO_DIR})
