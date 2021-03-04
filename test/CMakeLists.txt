@@ -11,6 +11,8 @@ add_executable(libra test_libra.cpp)
 
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../common/include)
 
-target_link_libraries(libra PRIVATE ${CRYPTO_LIB} common Threads::Threads )
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../lib/linux)
+
+target_link_libraries(libra PRIVATE ${CRYPTO_LIB} common Threads::Threads)
 
 install(TARGETS libra DESTINATION bin)
