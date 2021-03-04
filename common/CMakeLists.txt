@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.9)
 project(${CMAKE_PROJECT_NAME}-common)
 
-find_library(CRYPTO_LIB ./../lib/linux/crypto.so)
+find_library(CRYPTO_LIB crypto.so)
 
 set(LIBRA_SRC
         src/libra.cpp)
