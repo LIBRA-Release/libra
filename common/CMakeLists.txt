@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.9)
 project(${CMAKE_PROJECT_NAME}-common)
 
-add_library(common-lib SHARED IMPORTED GLOBAL)
+add_library(common-lib SHARED IMPORTED)
 set_target_properties(
   common-lib
   PROPERTIES
