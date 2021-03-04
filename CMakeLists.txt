@@ -20,7 +20,7 @@ include_directories(${COMMON_INCLUDE_DIR})
 #include_directories(${WZLIB_GO_DIR})
  
 # cgo library folder code
-add_subdirectory(lib/linux)
+add_subdirectory(lib)
 
 # Common code, packaged as a library
 add_subdirectory(common)
