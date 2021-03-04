@@ -13,6 +13,6 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../common/include)
 
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../lib/linux)
 
-target_link_libraries(libra PRIVATE ${CRYPTO_LIB} common Threads::Threads)
+target_link_libraries(libra PRIVATE common ${CRYPTO_LIB} Threads::Threads)
 
 install(TARGETS libra DESTINATION bin)
