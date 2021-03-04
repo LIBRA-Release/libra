@@ -7,6 +7,6 @@ find_package(Threads REQUIRED)
 
 add_executable(libra test_libra.cpp)
 
-target_link_libraries(libra PRIVATE common Threads::Threads lib)
+target_link_libraries(libra PRIVATE common common-lib Threads::Threads)
 
 install(TARGETS libra DESTINATION bin)
