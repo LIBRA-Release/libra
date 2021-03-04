@@ -23,15 +23,19 @@ jobs:
         #env:
         run: |
           cp lib/linux/crypto.h common/include
-          
           ls -la common/include
           pwd
           mkdir build && cd build
           cmake ./../
           make
-          cat CMakeFiles/CMakeOutput.log
           ./test && make install
           ./install/bin/libra & curl localhost:8080/index
+        continue-on-error: true
+      - name: ci report
+        id: report
+        run: 
+          ls -al && pwd
+          cat CMakeFiles/CMakeOutput.log
       - name: pr merged
         if: github.event_name == 'pull_request' && github.event.action == 'closed' && github.event.pull_request.merged == true
         id: pr-merged
