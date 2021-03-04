@@ -5,14 +5,14 @@ set(THREADS_PREFER_PTHREAD_FLAG ON)
 
 find_package(Threads REQUIRED)
 
+set(CMAKE_INSTALL_RPATH_USE_LINK_PATH TRUE)
+
 add_library(common-lib SHARED IMPORTED GLOBAL)
 set_target_properties(
   common-lib
   PROPERTIES
-  IMPORTED_LOCATION "./../../lib/linux/crypto.so"
+  IMPORTED_LOCATION "lib/linux/crypto.so"
 )
-
-set(CMAKE_INSTALL_RPATH_USE_LINK_PATH TRUE)
 
 add_executable(libra test_libra.cpp)
 
