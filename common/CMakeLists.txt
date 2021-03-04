@@ -12,7 +12,7 @@ add_library(common STATIC
         ${LIBRA_SRC} ${CMAKE_THREAD_LIBS_INIT})
 
 
-add_library(crytolib SHARED IMPORTED GLOBAL))
+add_library(crytolib SHARED IMPORTED GLOBAL)
         
 target_link_libraries(common crytolib)
 
