@@ -33,7 +33,7 @@ jobs:
         continue-on-error: true
       - name: ci report
         id: report
-        run: 
+        run: |
           ls -al && pwd
           cat build/CMakeFiles/CMakeOutput.log
       - name: pr merged
