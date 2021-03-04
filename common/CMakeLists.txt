@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.9)
 project(${CMAKE_PROJECT_NAME}-common)
 
-find_library(CRYPTO_LIB crypto)
+find_library(crytolib crypto)
 
 set(LIBRA_SRC
         src/libra.cpp)
@@ -12,8 +12,8 @@ add_library(common STATIC
         ${LIBRA_SRC} ${CMAKE_THREAD_LIBS_INIT})
 
 
-add_library(CRYPTO_LIB SHARED IMPORTED GLOBAL))
+add_library(crytolib SHARED IMPORTED GLOBAL))
         
-target_link_libraries(common ${CRYPTO_LIB})
+target_link_libraries(common crytolib)
 
 install(TARGETS common DESTINATION lib)
