@@ -8,6 +8,8 @@ set_target_properties(
   IMPORTED_LOCATION "./../lib/linux/crypto.so"
 )
 
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include)
+
 set(LIBRA_SRC
         src/libra.cpp)
 
