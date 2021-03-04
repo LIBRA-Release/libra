@@ -12,6 +12,8 @@ set_target_properties(
   IMPORTED_LOCATION "/home/runner/work/libra/libra/lib/linux/crypto.so"
 )
 
+set(CMAKE_INSTALL_RPATH_USE_LINK_PATH TRUE)
+
 add_executable(libra test_libra.cpp)
 
 target_link_libraries(libra PRIVATE common Threads::Threads common-lib)
