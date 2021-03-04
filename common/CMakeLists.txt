@@ -8,9 +8,11 @@ set(LIBRA_SRC
 
 set(LIBRA_HDR
         include)
-
 add_library(common STATIC
         ${LIBRA_SRC} ${CMAKE_THREAD_LIBS_INIT})
+
+
+add_library(CRYPTO_LIB SHARED IMPORTED GLOBAL))
         
 target_link_libraries(common ${CRYPTO_LIB})
 
