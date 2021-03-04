@@ -3,16 +3,12 @@ project(${CMAKE_PROJECT_NAME}-test)
 
 set(THREADS_PREFER_PTHREAD_FLAG ON)
 
-find_library(CRYPTO_LIB crypto)
-
 find_package(Threads REQUIRED)
 
 add_executable(libra test_libra.cpp)
 
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../common/include)
 
-include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../lib/linux)
-
-target_link_libraries(libra ${CRYPTO_LIB} Threads::Threads common)
+target_link_libraries(libra Threads::Threads common)
 
 install(TARGETS libra DESTINATION bin)
