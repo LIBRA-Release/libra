@@ -6,5 +6,7 @@ set(LIBRA_SRC
 
 add_library(common STATIC
         ${LIBRA_SRC} ${CMAKE_THREAD_LIBS_INIT})
-      
+        
+set(CMAKE_INSTALL_RPATH_USE_LINK_PATH TRUE)
+
 install(TARGETS common DESTINATION lib)
