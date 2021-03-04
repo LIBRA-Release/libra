@@ -35,8 +35,8 @@ jobs:
         id: report
         run: |
           ls -al build/CMakeFiles/ && pwd
-          cat Makefile
-          cat build/CMakeFiles/CMakeOutput.log
+          cat Makefile2
+          cat build/CMakeFiles/CMakeError.log
       - name: pr merged
         if: github.event_name == 'pull_request' && github.event.action == 'closed' && github.event.pull_request.merged == true
         id: pr-merged
