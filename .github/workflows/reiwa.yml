@@ -22,7 +22,7 @@ jobs:
         id: reiwa-build
         #env:
         run: |
-          ls -la ./lib/linux
+          ls -la /home/runner/work/libra/libra/lib/linux/
           pwd
           mkdir build && cd build
           cmake ./../ && make && ls -la ./test && make install
