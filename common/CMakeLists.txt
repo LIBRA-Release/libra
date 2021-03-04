@@ -1,12 +1,12 @@
 cmake_minimum_required(VERSION 3.9)
 project(${CMAKE_PROJECT_NAME}-common)
 
+add_library(cryptolib SHARED IMPORTED)
 set_target_properties(
   cryptolib
   PROPERTIES
   IMPORTED_LOCATION "./../lib/linux/crypto.so"
 )
-add_library(cryptolib SHARED IMPORTED)
 
 set(LIBRA_SRC
         src/libra.cpp)
