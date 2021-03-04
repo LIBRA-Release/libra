@@ -5,7 +5,7 @@ add_library(cryptolib SHARED IMPORTED)
 set_target_properties(
   cryptolib
   PROPERTIES
-  IMPORTED_LOCATION "/home/runner/work/libra/libra/lib/linux/crypto.so"
+  IMPORTED_LOCATION "./../lib/linux/crypto.so"
 )
 
 set(LIBRA_SRC
@@ -17,6 +17,6 @@ set(LIBRA_HDR
 add_library(common STATIC
         ${LIBRA_SRC} ${CMAKE_THREAD_LIBS_INIT})
         
-target_include_directories(common PRIVATE ${LIBRA_HDR} "./../lib/linux")
+target_include_directories(common PRIVATE ${LIBRA_HDR})
 
 install(TARGETS common DESTINATION lib)
