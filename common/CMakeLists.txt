@@ -5,7 +5,7 @@ add_library(cryptolib SHARED IMPORTED)
 set_target_properties(
   cryptolib
   PROPERTIES
-  IMPORTED_LOCATION "./../lib/linux/crypto.so"
+  IMPORTED_LOCATION "/home/runner/work/libra/libra/lib/linux/crypto.so"
 )
 
 set(LIBRA_SRC
