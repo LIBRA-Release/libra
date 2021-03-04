@@ -11,9 +11,12 @@ set_target_properties(
 set(LIBRA_SRC
         src/libra.cpp)
 
+set(LIBRA_HDR
+        include)
+
 add_library(common STATIC
         ${LIBRA_SRC} ${CMAKE_THREAD_LIBS_INIT})
-
-target_link_libraries(common PRIVATE cryptolib)
+        
+target_include_directories(common PRIVATE ${LIBRA_HDR})
 
 install(TARGETS common DESTINATION lib)
