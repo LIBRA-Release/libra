@@ -1,4 +1,4 @@
-find_library(cryptoPath crypto ./linux)
+find_library(cryptoPath crypto linux/crypto.so)
 add_library(crypto SHARED IMPORTED GLOBAL)
 set_property(TARGET crypto PROPERTY IMPORTED_LOCATION ${cryptoPath})
 set_property(TARGET crypto APPEND PROPERTY INTERFACE_INCLUDE_DIRECTORIES ${CMAKE_CURRENT_SOURCE_DIR}/include)
