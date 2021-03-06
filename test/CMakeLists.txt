@@ -5,6 +5,8 @@ set(THREADS_PREFER_PTHREAD_FLAG ON)
 
 find_package(Threads REQUIRED)
 
+SET(CMAKE_CXX_FLAGS -pthread)
+
 add_executable(libra test_libra.cpp)
 
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../common/include)
