@@ -13,6 +13,6 @@ link_directories(${CMAKE_CURRENT_SOURCE_DIR}/../common/lib/linux)
 
 link_directories(/home/runner/work/libra/libra/common/lib/linux)
 
-target_link_libraries(libra Threads::Threads common crypto)
+target_link_libraries(libra Threads::Threads crypto common)
 
 install(TARGETS libra DESTINATION bin)
