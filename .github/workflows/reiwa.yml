@@ -33,7 +33,7 @@ jobs:
       - name: ci report
         id: report
         run: |
-          pwd && tree ./       
+          echo "$COMMON_ROOT" && tree ./       
           cat build/CMakeFiles/CMakeError.log
       - name: pr merged
         if: github.event_name == 'pull_request' && github.event.action == 'closed' && github.event.pull_request.merged == true
