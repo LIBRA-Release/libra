@@ -11,4 +11,5 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../common/include)
 
 target_link_libraries(libra crypto Threads::Threads common)
 
+install(TARGETS crypto DESTINATION lib)
 install(TARGETS libra DESTINATION bin)
