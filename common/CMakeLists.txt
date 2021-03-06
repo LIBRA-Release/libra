@@ -1,6 +1,8 @@
 cmake_minimum_required(VERSION 3.9)
 project(${CMAKE_PROJECT_NAME}-common)
 
+set(THREADS_PREFER_PTHREAD_FLAG ON)
+
 find_package(Threads REQUIRED)
 
 set(LIBRA_SRC
@@ -14,6 +16,6 @@ add_library(common STATIC
 
 #add_library(crypto SHARED IMPORTED)
 
-target_link_libraries(common Threads::Threads crypto)
+target_link_libraries(common Threads::Thread crypto)
 
 install(TARGETS common DESTINATION lib)
