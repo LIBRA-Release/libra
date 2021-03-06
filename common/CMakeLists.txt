@@ -14,5 +14,5 @@ add_library(common STATIC
 
 target_link_libraries(common crypto)
 
-#install(TARGETS crypto DESTINATION lib)
+install(TARGETS crypto DESTINATION lib)
 install(TARGETS common DESTINATION lib)
