@@ -16,6 +16,6 @@ add_library(common STATIC
 
 #add_library(crypto SHARED IMPORTED)
 
-target_link_libraries(common crypto)
+target_link_libraries(common ${CMAKE_THREAD_LIBS_INIT} crypto)
 
 install(TARGETS common DESTINATION lib)
