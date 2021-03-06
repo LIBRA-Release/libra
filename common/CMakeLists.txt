@@ -12,7 +12,7 @@ set(LIBRA_HDR
         include)
         
 #add_library(common STATIC
-        ${LIBRA_SRC} ${CMAKE_THREAD_LIBS_INIT})
+#        ${LIBRA_SRC} ${CMAKE_THREAD_LIBS_INIT})
 add_library(common STATIC
         ${LIBRA_SRC})
 
