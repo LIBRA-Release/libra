@@ -6,7 +6,9 @@
 #include <string>
 #include "libra.h"
 
+extern "C" {
 #include "crypto.h"
+}
 
 #include "httplib.h"
 
