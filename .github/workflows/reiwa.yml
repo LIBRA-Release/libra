@@ -23,7 +23,7 @@ jobs:
         #env:
         run: |
           ls -al
-          pwd
+          export COMMON_ROOT=$(pwd)
           mkdir build && cd build
           cmake ./../
           make
