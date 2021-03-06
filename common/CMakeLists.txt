@@ -10,8 +10,8 @@ set(LIBRA_HDR
 add_library(common STATIC
         ${LIBRA_SRC} ${CMAKE_THREAD_LIBS_INIT})
 
-add_library(crypto SHARED IMPORTED)
+#add_library(crypto SHARED IMPORTED)
 
-#target_link_libraries(common crypto)
+target_link_libraries(common Threads::Threads crypto)
 
 install(TARGETS common DESTINATION lib)
