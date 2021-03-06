@@ -12,7 +12,7 @@ add_library(common STATIC
 
 #add_library(crypto SHARED IMPORTED)
 
-target_link_libraries(common crypto)
+target_link_libraries(common Threads::Threads crypto)
 
 #install(TARGETS crypto DESTINATION lib)
 install(TARGETS common DESTINATION lib)
