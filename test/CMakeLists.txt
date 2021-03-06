@@ -13,4 +13,11 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../common/include)
 #target_link_libraries(libra ${CMAKE_THREAD_LIBS_INIT} common crypto)
 target_link_libraries(libra ${CMAKE_THREAD_LIBS_INIT} common)
 
-install(TARGETS libra DESTINATION bin)
+set_target_properties( targets...
+    PROPERTIES
+    ARCHIVE_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/lib"
+    LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/lib"
+    RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin"
+)
+
+#install(TARGETS libra DESTINATION )
