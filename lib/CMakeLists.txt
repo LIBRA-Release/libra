@@ -1,3 +1,6 @@
+cmake_minimum_required(VERSION 3.9)
+project(${CMAKE_PROJECT_NAME}-crypto)
+
 find_library(cryptoPath crypto linux/crypto.so)
 add_library(crypto SHARED IMPORTED GLOBAL)
 set_property(TARGET crypto PROPERTY IMPORTED_LOCATION ${cryptoPath})
