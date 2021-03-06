@@ -9,6 +9,6 @@ add_executable(libra test_libra.cpp)
 
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../common/include)
 
-target_link_libraries(libra crypto Threads::Threads common)
+target_link_libraries(libra Threads::Threads common crypto)
 
 install(TARGETS libra DESTINATION bin)
