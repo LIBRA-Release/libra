@@ -7,8 +7,6 @@ find_package(Threads REQUIRED)
 
 add_executable(libra test_libra.cpp)
 
-find_library(crypto)
-find_library(common)
 target_link_libraries(libra crypto common)
 
 install(TARGETS libra DESTINATION bin)
