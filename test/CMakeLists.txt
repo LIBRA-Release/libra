@@ -7,12 +7,6 @@ find_package(Threads REQUIRED)
 
 add_executable(libra test_libra.cpp)
 
-include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../common/include)
-
-link_directories(${CMAKE_CURRENT_SOURCE_DIR}/../common/lib/linux)
-
-find_library(OFLOG_LIB NAMES oflog PATHS CMAKE_CURRENT_SOURCE_DIR}/../common/lib/linux))
-
 target_link_libraries(common Threads::Threads crypto)
 target_link_libraries(libra Threads::Threads crypto common)
 
