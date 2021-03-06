@@ -1,6 +1,8 @@
 cmake_minimum_required(VERSION 3.9)
 project(${CMAKE_PROJECT_NAME}-common)
 
+find_package(Threads REQUIRED)
+
 set(LIBRA_SRC
         src/libra.cpp)
 
