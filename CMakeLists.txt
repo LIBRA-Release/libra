@@ -23,7 +23,6 @@ include_directories(${COMMON_INCLUDE_DIR})
 add_subdirectory(lib)
 #add_subdirectory(lib/linux")
 
-
 # Common code, packaged as a library
 add_subdirectory(common)
 
