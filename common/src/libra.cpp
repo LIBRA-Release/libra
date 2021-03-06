@@ -6,7 +6,9 @@
 #include <string>
 #include "libra.h"
 
+/*
 #include "crypto.h"
+*/
 
 #include "httplib.h"
 
@@ -22,10 +24,10 @@ void agent() {
   char m[n + 1];
   strcpy(m, op.c_str());
   
-  printf("%s, size: %d\n", m, n);
+  //printf("%s, size: %d\n", m, n);
   //GoString tkn = {m, n};
-  char *plain = ValidateToken(m);
-  printf("return %s, with length %d\n", plain, (int) strlen(plain));
+  //char *plain = ValidateToken(m);
+  //printf("return %s, with length %d\n", plain, (int) strlen(plain));
 }
 
 void hello() {
