@@ -24,6 +24,7 @@ jobs:
         run: |
           ls -al
           export COMMON_ROOT=$(pwd)
+          echo $COMMON_ROOT
           mkdir build && cd build
           cmake ./../
           make
@@ -33,7 +34,7 @@ jobs:
       - name: ci report
         id: report
         run: |
-          echo "$COMMON_ROOT" && tree ./       
+          tree ./       
           cat build/CMakeFiles/CMakeError.log
       - name: pr merged
         if: github.event_name == 'pull_request' && github.event.action == 'closed' && github.event.pull_request.merged == true
