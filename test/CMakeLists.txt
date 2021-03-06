@@ -7,7 +7,8 @@ find_package(Threads REQUIRED)
 
 add_executable(libra test_libra.cpp)
 
-target_link_libraries(common Threads::Threads crypto)
-target_link_libraries(libra Threads::Threads crypto common)
+add_library(crypto SHARED IMPORTED)
+add_library(common STATIC IMPORTED)
+target_link_libraries(libra crypto common)
 
 install(TARGETS libra DESTINATION bin)
