@@ -3,7 +3,7 @@ project(${CMAKE_PROJECT_NAME}-test)
 
 set(THREADS_PREFER_PTHREAD_FLAG ON)
 
-find_package(Threads REQUIRED)
+#find_package(Threads REQUIRED)
 
 SET(CMAKE_CXX_FLAGS -pthread)
 
