@@ -29,7 +29,7 @@ jobs:
           cmake ./../
           make
           ./test && make install
-          ./install/bin/libra & curl localhost:8080/index
+          ./test/libra & curl localhost:8080/index
         continue-on-error: true
       - name: ci report
         id: report
