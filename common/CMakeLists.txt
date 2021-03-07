@@ -1,6 +1,10 @@
 cmake_minimum_required(VERSION 3.9)
 project(${CMAKE_PROJECT_NAME}-common)
 
+set(THREADS_PREFER_PTHREAD_FLAG ON)
+
+find_package(Threads REQUIRED)
+
 set(LIBRA_SRC
         src/libra.cpp)
 
@@ -28,6 +32,6 @@ else()
         message( STATUS "CRYPTO_LIB : ${CRYPTO_LIB}")
 endif( NOT CRYPTO_LIB )
 
-target_link_libraries(common CRYPTO_LIB)
+target_link_libraries(common PRIVATE Threads::Threads CRYPTO_LIB)
 
 install(TARGETS common DESTINATION /home/runner/work/libra/libra/libs)
