@@ -9,12 +9,20 @@ add_executable(libra test_libra.cpp)
 
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../common/include)
 
-if ( NOT crypto )
-        message( WARNING "crypto NOT FOUND")
-else()
-        message( STATUS "crypto library : ${crypto}")
-endif( NOT crypto )
+find_library(CRYPTO_LIB
+         NAMES 
+            crypto.so
+         PATHS 
+            /home/runner/work/libra/libra/lib/linux
+)
 
-target_link_libraries(libra PRIVATE Threads::Threads common crypto)
+#add_library(crypto SHARED IMPORTED)
+if ( NOT CRYPTO_LIB )
+        message( WARNING "CRYPTO_LIB NOT FOUND in common")
+else()
+        message( STATUS "CRYPTO_LIB : ${CRYPTO_LIB}")
+endif( NOT CRYPTO_LIB )
+
+target_link_libraries(libra PRIVATE Threads::Threads common CRYPTO_LIB)
 
 #install(TARGETS libra DESTINATION bin)
