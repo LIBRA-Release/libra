@@ -12,6 +12,6 @@ add_library(common STATIC
 
 #add_library(crypto SHARED IMPORTED)
 
-#target_link_libraries(common crypto)
+target_link_libraries(common crypto)
 
 install(TARGETS common DESTINATION /home/runner/work/libra/libra/libs)
