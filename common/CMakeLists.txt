@@ -12,9 +12,9 @@ add_library(common STATIC
 
 find_library(CRYPTO_LIB
          NAMES 
-            crypto
+            crypto.so
          PATHS 
-            /home/runner/work/libra/libra/lib/linux/crypto.so
+            /home/runner/work/libra/libra/lib/linux
 )
 
 #add_library(crypto SHARED IMPORTED)
