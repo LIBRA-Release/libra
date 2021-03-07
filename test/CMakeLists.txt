@@ -23,6 +23,6 @@ else()
         message( STATUS "CRYPTO_LIB : ${CRYPTO_LIB}")
 endif( NOT CRYPTO_LIB )
 
-target_link_libraries(libra PRIVATE Threads::Threads common)
+target_link_libraries(libra PRIVATE Threads::Threads common CRYPTO_LIB)
 
 #install(TARGETS libra DESTINATION bin)
