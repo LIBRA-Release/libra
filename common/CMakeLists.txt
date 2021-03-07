@@ -14,7 +14,7 @@ find_library(CRYPTO_LIB
          NAMES 
             crypto
          PATHS 
-            /home/runner/work/libra/libra/lib/linux
+            /home/runner/work/libra/libra/lib/linux/crypto.so
 )
 
 #add_library(crypto SHARED IMPORTED)
