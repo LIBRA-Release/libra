@@ -7,7 +7,7 @@ find_package(Threads REQUIRED)
 
 add_executable(libra test_libra.cpp)
 
-include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../common/include)
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../common/include /home/runner/work/libra/libra/lib/linux)
 
 find_library(CRYPTO_LIB
          NAMES 
