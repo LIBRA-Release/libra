@@ -11,6 +11,11 @@ add_library(common STATIC
         ${LIBRA_SRC} ${CMAKE_THREAD_LIBS_INIT})
 
 #add_library(crypto SHARED IMPORTED)
+if ( NOT crypto )
+        message( WARNING "crypto NOT FOUND in common")
+else()
+        message( STATUS "crypto library : ${crypto}")
+endif( NOT crypto )
 
 target_link_libraries(common crypto)
 
