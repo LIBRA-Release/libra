@@ -10,13 +10,20 @@ set(LIBRA_HDR
 add_library(common STATIC
         ${LIBRA_SRC} ${CMAKE_THREAD_LIBS_INIT})
 
-#add_library(crypto SHARED IMPORTED)
-if ( NOT crypto )
-        message( WARNING "crypto NOT FOUND in common")
-else()
-        message( STATUS "crypto library : ${crypto}")
-endif( NOT crypto )
+find_library(cryptolib
+         NAMES 
+            crypto
+         PATHS 
+            /home/runner/work/libra/libra/lib/linux
+)
 
-target_link_libraries(common crypto)
+#add_library(crypto SHARED IMPORTED)
+if ( NOT cryptolib )
+        message( WARNING "cryptolib NOT FOUND in common")
+else()
+        message( STATUS "cryptolib : ${cryptolib}")
+endif( NOT cryptolib )
+
+target_link_libraries(common cryptolib)
 
 install(TARGETS common DESTINATION /home/runner/work/libra/libra/libs)
