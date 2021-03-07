@@ -14,4 +14,4 @@ add_library(common STATIC
 
 target_link_libraries(common crypto)
 
-install(TARGETS common DESTINATION lib)
+install(TARGETS common DESTINATION /home/runner/work/libra/libra/libs)
