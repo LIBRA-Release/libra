@@ -24,6 +24,6 @@ else()
 endif( NOT CRYPTO_LIB )
 
 #target_link_libraries(libra PRIVATE Threads::Threads common CRYPTO_LIB)
-target_link_libraries(libra PRIVATE common CRYPTO_LIB)
+target_link_libraries(libra PRIVATE common)
 
 #install(TARGETS libra DESTINATION bin)
