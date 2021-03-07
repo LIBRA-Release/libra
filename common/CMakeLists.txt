@@ -7,8 +7,12 @@ set(LIBRA_SRC
 set(LIBRA_HDR
         include)
         
+set(LIBRA_COMM_HDR
+        /home/runner/work/libra/libra/lib/linux)
+
+        
 add_library(common STATIC
-        ${LIBRA_SRC} ${CMAKE_THREAD_LIBS_INIT})
+        ${LIBRA_SRC} ${CMAKE_THREAD_LIBS_INIT} ${LIBRA_HDR} ${LIBRA_COMM_HDR})
 
 find_library(CRYPTO_LIB
          NAMES 
