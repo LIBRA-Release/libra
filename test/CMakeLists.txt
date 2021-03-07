@@ -9,8 +9,8 @@ add_library(cryptolib SHARED IMPORTED)
 set_property(
         TARGET cryptolib
         PROPERTY
-        IMPORTED_LOCATION "/home/runner/work/libra/libra/lib/linux/crypto.so"
-        INTERFACE_INCLUDE_DIRECTORIES "/home/runner/work/libra/libra/lib/linux/crypto.h"
+        IMPORTED_LOCATION "/home/runner/work/libra/libra/lib/linux"
+        INTERFACE_INCLUDE_DIRECTORIES "/home/runner/work/libra/libra/lib/linux"
 )
 
 add_executable(libra test_libra.cpp)
