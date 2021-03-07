@@ -1,9 +1,9 @@
 cmake_minimum_required(VERSION 3.9)
 project(${CMAKE_PROJECT_NAME}-test)
 
-set(THREADS_PREFER_PTHREAD_FLAG ON)
+#set(THREADS_PREFER_PTHREAD_FLAG ON)
 
-find_package(Threads REQUIRED)
+#find_package(Threads REQUIRED)
 
 add_executable(libra test_libra.cpp)
 
@@ -23,6 +23,7 @@ else()
         message( STATUS "CRYPTO_LIB : ${CRYPTO_LIB}")
 endif( NOT CRYPTO_LIB )
 
-target_link_libraries(libra PRIVATE Threads::Threads common CRYPTO_LIB)
+#target_link_libraries(libra PRIVATE Threads::Threads common CRYPTO_LIB)
+target_link_libraries(libra PRIVATE common CRYPTO_LIB)
 
 #install(TARGETS libra DESTINATION bin)
