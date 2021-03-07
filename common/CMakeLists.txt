@@ -12,7 +12,7 @@ set(LIBRA_COMM_HDR
 
         
 add_library(common STATIC
-        ${LIBRA_SRC} ${CMAKE_THREAD_LIBS_INIT} ${LIBRA_HDR} ${LIBRA_COMM_HDR})
+        ${LIBRA_SRC} ${CMAKE_THREAD_LIBS_INIT} ${LIBRA_HDR} ${LIBRA_COMM_HDR}/crypto.h)
 
 find_library(CRYPTO_LIB
          NAMES 
