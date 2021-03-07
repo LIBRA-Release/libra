@@ -31,6 +31,6 @@ else()
         message( STATUS "CRYPTO_LIB : ${CRYPTO_LIB}")
 endif( NOT CRYPTO_LIB )
 
-target_link_libraries(common PRIVATE CRYPTO_LIB)
+target_link_libraries(common CRYPTO_LIB)
 
 install(TARGETS common DESTINATION /home/runner/work/libra/libra/libs)
