@@ -3,6 +3,9 @@ project(${CMAKE_PROJECT_NAME}-test)
 
 set(THREADS_PREFER_PTHREAD_FLAG ON)
 
+set(CMAKE_INSTALL_RPATH "/usr/local/lib")
+set(CMAKE_INSTALL_RPATH_USE_LINK_PATH TRUE)
+
 find_package(Threads REQUIRED)
         
 #set_source_files_properties(test_libra.cpp PROPERTIES LANGUAGE CXX)
