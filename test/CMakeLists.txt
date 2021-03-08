@@ -5,11 +5,14 @@ set(THREADS_PREFER_PTHREAD_FLAG ON)
 
 find_package(Threads REQUIRED)
 
-set_source_files_properties(test_libra.cpp PROPERTIES LANGUAGE CXX)
+set(CRYPTO_DIR
+        ${COMMON_ROOT}/lib/linux)
+        
+#set_source_files_properties(test_libra.cpp PROPERTIES LANGUAGE CXX)
 
 add_executable(libra test_libra.cpp)
 
-#include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../common/include /home/runner/work/libra/libra/lib/linux)
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../common/include ${CRYPTO_DIR})
 
 #find_library(CRYPTO_LIB
 #         NAMES 
@@ -18,17 +21,17 @@ add_executable(libra test_libra.cpp)
 #            /home/runner/work/libra/libra/lib/linux
 #)
 
-set(legacy_link ${CMAKE_CURRENT_LIST_DIR}/libcrypto.so)
-set(legacy_target /home/runner/work/libra/libra/lib/linux/crypto.so)
-add_custom_command( OUTPUT ${legacy_link}
-                    COMMAND ln -s ${legacy_target} ${legacy_link}
-                    DEPENDS install ${legacy_target} 
-                    COMMENT "Generating libcrypto.so symbolic link")
+#set(legacy_link ${CMAKE_CURRENT_LIST_DIR}/libcrypto.so)
+#set(legacy_target /home/runner/work/libra/libra/lib/linux/crypto.so)
+#add_custom_command( OUTPUT ${legacy_link}
+#                    COMMAND ln -s ${legacy_target} ${legacy_link}
+#                    DEPENDS install ${legacy_target} 
+#                    COMMENT "Generating libcrypto.so symbolic link")
 
-add_custom_target( install_legacy DEPENDS ${legacy_link} )
+#add_custom_target( install_legacy DEPENDS ${legacy_link} )
 
-message( STATUS "legacy_link : ${legacy_link}")
- 
+#message( STATUS "legacy_link : ${legacy_link}")
+
 target_link_libraries(libra PRIVATE Threads::Threads common crypto)
 
-#install(TARGETS libra DESTINATION bin)
+#install(TARGETS libra install_legacy DESTINATION bin)
