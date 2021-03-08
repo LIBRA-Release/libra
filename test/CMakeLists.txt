@@ -12,7 +12,7 @@ add_executable(libra test_libra.cpp)
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../common/include)
 link_directories(${CMAKE_CURRENT_LIST_DIR})
 
-#message( "***** CRYPTO_DIR: ${CRYPTO_DIR}")
+message( "***** CMAKE_CURRENT_LIST_DIR: ${CMAKE_CURRENT_LIST_DIR}")
 
 #find_library(CRYPTO_LIB
 #         NAMES 
@@ -32,7 +32,7 @@ link_directories(${CMAKE_CURRENT_LIST_DIR})
 
 #message( STATUS "legacy_link : ${legacy_link}")
 
-target_link_libraries(common crypto)
-target_link_libraries(libra Threads::Threads crypto common)
+target_link_libraries(common "crypto")
+target_link_libraries(libra Threads::Threads "crypto" common)
 
 #install(TARGETS libra install_legacy DESTINATION bin)
