@@ -7,22 +7,24 @@ find_package(Threads REQUIRED)
 
 add_executable(libra test_libra.cpp)
 
-include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../common/include /home/runner/work/libra/libra/lib/linux)
+#include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../common/include /home/runner/work/libra/libra/lib/linux)
 
-find_library(CRYPTO_LIB
-         NAMES 
-            crypto.so
-         PATHS 
-            /home/runner/work/libra/libra/lib/linux
-)
+#find_library(CRYPTO_LIB
+#         NAMES 
+#            crypto.so
+#         PATHS 
+#            /home/runner/work/libra/libra/lib/linux
+#)
 
-#add_library(crypto SHARED IMPORTED)
-if ( NOT CRYPTO_LIB )
-        message( WARNING "CRYPTO_LIB NOT FOUND in common")
-else()
-        message( STATUS "CRYPTO_LIB : ${CRYPTO_LIB}")
-endif( NOT CRYPTO_LIB )
+set(legacy_link ${CMAKE_CURRENT_LIST_DIR}/libcrypto.so)
+set(legacy_target /home/runner/work/libra/libra/lib/linux/crypto.so)
+add_custom_command( OUTPUT ${legacy_link}
+                    COMMAND ln -s ${legacy_target} ${legacy_link}
+                    DEPENDS install ${legacy_target} 
+                    COMMENT "Generating libcrypto.so symbolic link")
 
-target_link_libraries(libra PRIVATE Threads::Threads common CRYPTO_LIB)
+add_custom_target( install_legacy DEPENDS ${legacy_link} )
+ 
+target_link_libraries(libra PRIVATE Threads::Threads common crypto)
 
 #install(TARGETS libra DESTINATION bin)
