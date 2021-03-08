@@ -34,5 +34,5 @@ message( "***** CMAKE_CURRENT_LIST_DIR: ${CMAKE_CURRENT_LIST_DIR}")
 
 #target_link_libraries(common "crypto")
 target_link_libraries(libra Threads::Threads common ${CMAKE_CURRENT_LIST_DIR}/libcrypto.so)
-configure_file(${CMAKE_CURRENT_LIST_DIR}/libra ${CMAKE_CURRENT_LIST_DIR}/../test COPYONLY)
+#configure_file(${CMAKE_CURRENT_LIST_DIR}/libra ${CMAKE_CURRENT_LIST_DIR}/../test COPYONLY)
 #install(TARGETS libra install_legacy DESTINATION bin)
