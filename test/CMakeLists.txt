@@ -26,6 +26,8 @@ add_custom_command( OUTPUT ${legacy_link}
                     COMMENT "Generating libcrypto.so symbolic link")
 
 add_custom_target( install_legacy DEPENDS ${legacy_link} )
+
+message( STATUS "install_legacy : ${install_legacy}")
  
 target_link_libraries(libra PRIVATE Threads::Threads common crypto)
 
