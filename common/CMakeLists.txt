@@ -8,7 +8,7 @@ set(LIBRA_HDR
         include)
         
 set(CRYPTO_DIR
-        ${COMMON_ROOT}/lib/linux)
+        $ENV{COMMON_ROOT}/lib/linux)
 
         
 add_library(common STATIC
