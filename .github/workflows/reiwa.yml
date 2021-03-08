@@ -22,9 +22,9 @@ jobs:
         id: reiwa-build
         #env:
         run: |
-          ls -al
           export COMMON_ROOT=$(pwd)
           echo $COMMON_ROOT
+          ln -s $COMMON_ROOT/lib/linux/crypto.so $COMMON_ROOT/lib/linux/libcrypto.so
           mkdir build && cd build
           cmake ./../
           make
