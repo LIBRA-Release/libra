@@ -12,22 +12,22 @@ set(LIBRA_COMM_HDR
 
         
 add_library(common STATIC
-        ${LIBRA_SRC} ${CMAKE_THREAD_LIBS_INIT} ${LIBRA_HDR} ${LIBRA_COMM_HDR}/crypto.h)
+        ${LIBRA_SRC} ${CMAKE_THREAD_LIBS_INIT} ${LIBRA_HDR} ${LIBRA_COMM_HDR})
 
-find_library(CRYPTO_LIB
-         NAMES 
-            crypto.so
-         PATHS 
-            /home/runner/work/libra/libra/lib/linux
-)
+#find_library(CRYPTO_LIB
+#         NAMES 
+#            crypto.so
+#         PATHS 
+#            /home/runner/work/libra/libra/lib/linux
+#)
 
 #add_library(crypto SHARED IMPORTED)
-if ( NOT CRYPTO_LIB )
-        message( WARNING "CRYPTO_LIB NOT FOUND in common")
-else()
-        message( STATUS "CRYPTO_LIB : ${CRYPTO_LIB}")
-endif( NOT CRYPTO_LIB )
+#if ( NOT CRYPTO_LIB )
+#        message( WARNING "CRYPTO_LIB NOT FOUND in common")
+#else()
+#        message( STATUS "CRYPTO_LIB : ${CRYPTO_LIB}")
+#endif( NOT CRYPTO_LIB )
 
-target_link_libraries(common CRYPTO_LIB)
+#target_link_libraries(common CRYPTO_LIB)
 
 install(TARGETS common DESTINATION /home/runner/work/libra/libra/libs)
