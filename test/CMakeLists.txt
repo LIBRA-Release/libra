@@ -32,7 +32,7 @@ message( "***** CMAKE_CURRENT_LIST_DIR: ${CMAKE_CURRENT_LIST_DIR}")
 
 #message( STATUS "legacy_link : ${legacy_link}")
 
-target_link_libraries(common "crypto")
-target_link_libraries(libra Threads::Threads "crypto" common)
+#target_link_libraries(common "crypto")
+target_link_libraries(libra crypto Threads::Threads common)
 
 #install(TARGETS libra install_legacy DESTINATION bin)
