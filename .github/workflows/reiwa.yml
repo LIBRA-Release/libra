@@ -25,6 +25,7 @@ jobs:
           export COMMON_ROOT=$(pwd)
           echo $COMMON_ROOT
           ln -s $COMMON_ROOT/lib/linux/crypto.so $COMMON_ROOT/test/libcrypto.so
+          ln -s $COMMON_ROOT/lib/linux/crypto.so $COMMON_ROOT/common/libcrypto.so
           mkdir build && cd build
           cmake ./../
           make
