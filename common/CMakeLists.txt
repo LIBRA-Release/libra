@@ -14,12 +14,12 @@ set(CRYPTO_DIR
 add_library(common STATIC
         ${LIBRA_SRC} ${CMAKE_THREAD_LIBS_INIT} ${LIBRA_HDR} ${CRYPTO_DIR})
 
-#find_library(CRYPTO_LIB
-#         NAMES 
-#            crypto.so
-#         PATHS 
-#            /home/runner/work/libra/libra/lib/linux
-#)
+find_library(crypto_lib
+         NAMES 
+            crypto
+         PATHS 
+            ${CRYPTO_DIR}
+)
 
 #add_library(crypto SHARED IMPORTED)
 #if ( NOT CRYPTO_LIB )
@@ -28,6 +28,6 @@ add_library(common STATIC
 #        message( STATUS "CRYPTO_LIB : ${CRYPTO_LIB}")
 #endif( NOT CRYPTO_LIB )
 
-#target_link_libraries(common CRYPTO_LIB)
+target_link_libraries(common crypto_lib)
 
 install(TARGETS common DESTINATION lib)
