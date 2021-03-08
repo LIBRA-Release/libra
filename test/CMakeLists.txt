@@ -13,6 +13,9 @@ set(CRYPTO_DIR
 add_executable(libra test_libra.cpp)
 
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../common/include ${CRYPTO_DIR})
+link_directories(${CRYPTO_DIR})
+
+message( "***** CRYPTO_DIR: ${CRYPTO_DIR}")
 
 #find_library(CRYPTO_LIB
 #         NAMES 
