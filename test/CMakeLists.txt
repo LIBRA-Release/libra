@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.9)
+cmake_minimum_required(VERSION 3.13)
 project(${CMAKE_PROJECT_NAME}-test)
 
 set(THREADS_PREFER_PTHREAD_FLAG ON)
