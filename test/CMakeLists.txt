@@ -4,18 +4,15 @@ project(${CMAKE_PROJECT_NAME}-test)
 set(THREADS_PREFER_PTHREAD_FLAG ON)
 
 find_package(Threads REQUIRED)
-
-set(CRYPTO_DIR
-        $ENV{COMMON_ROOT}/lib/linux)
         
 #set_source_files_properties(test_libra.cpp PROPERTIES LANGUAGE CXX)
 
 add_executable(libra test_libra.cpp)
 
-include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../common/include ${CRYPTO_DIR})
-link_directories(${CRYPTO_DIR})
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../common/include)
+link_directories(${CMAKE_CURRENT_LIST_DIR})
 
-message( "***** CRYPTO_DIR: ${CRYPTO_DIR}")
+#message( "***** CRYPTO_DIR: ${CRYPTO_DIR}")
 
 #find_library(CRYPTO_LIB
 #         NAMES 
