@@ -5,6 +5,8 @@ set(THREADS_PREFER_PTHREAD_FLAG ON)
 
 find_package(Threads REQUIRED)
 
+set_source_files_properties(test_libra.cpp PROPERTIES LANGUAGE CXX)
+
 add_executable(libra test_libra.cpp)
 
 #include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../common/include /home/runner/work/libra/libra/lib/linux)
