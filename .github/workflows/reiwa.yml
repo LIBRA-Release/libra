@@ -27,7 +27,7 @@ jobs:
           ln -s $COMMON_ROOT/lib/linux/crypto.so $COMMON_ROOT/test/libcrypto.so
           mkdir build && cd build
           cmake ./../
-          make
+          make VERBOSE=1
           ./test && make install
           ./install/bin/libra & curl localhost:8080/index
         continue-on-error: true
