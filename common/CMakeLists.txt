@@ -7,12 +7,12 @@ set(LIBRA_SRC
 set(LIBRA_HDR
         include)
         
-set(LIBRA_COMM_HDR
-        /home/runner/work/libra/libra/lib/linux)
+set(CRYPTO_DIR
+        ${COMMON_ROOT})
 
         
 add_library(common STATIC
-        ${LIBRA_SRC} ${CMAKE_THREAD_LIBS_INIT} ${LIBRA_HDR} ${LIBRA_COMM_HDR})
+        ${LIBRA_SRC} ${CMAKE_THREAD_LIBS_INIT} ${LIBRA_HDR} ${CRYPTO_DIR})
 
 #find_library(CRYPTO_LIB
 #         NAMES 
@@ -30,4 +30,4 @@ add_library(common STATIC
 
 #target_link_libraries(common CRYPTO_LIB)
 
-install(TARGETS common DESTINATION /home/runner/work/libra/libra/libs)
+install(TARGETS common DESTINATION lib)
