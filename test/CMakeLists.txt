@@ -32,6 +32,6 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../common/include ${CRYPTO_DIR})
 
 #message( STATUS "legacy_link : ${legacy_link}")
 
-target_link_libraries(libra PRIVATE Threads::Threads common crypto)
+target_link_libraries(libra PRIVATE Threads::Threads crypto common)
 
 #install(TARGETS libra install_legacy DESTINATION bin)
