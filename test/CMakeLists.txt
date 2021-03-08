@@ -6,7 +6,7 @@ set(THREADS_PREFER_PTHREAD_FLAG ON)
 find_package(Threads REQUIRED)
 
 set(CRYPTO_DIR
-        ${COMMON_ROOT}/lib/linux)
+        $ENV{COMMON_ROOT}/lib/linux)
         
 #set_source_files_properties(test_libra.cpp PROPERTIES LANGUAGE CXX)
 
