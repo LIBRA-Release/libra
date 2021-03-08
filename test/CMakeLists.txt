@@ -35,7 +35,7 @@ message( "***** CRYPTO_DIR: ${CRYPTO_DIR}")
 
 #message( STATUS "legacy_link : ${legacy_link}")
 
-#target_link_libraries(libra PRIVATE Threads::Threads crypto common)
-target_link_libraries(libra PRIVATE pthread crypto common)
+target_link_libraries(common crypto)
+target_link_libraries(libra Threads::Threads crypto common)
 
 #install(TARGETS libra install_legacy DESTINATION bin)
