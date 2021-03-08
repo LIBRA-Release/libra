@@ -3,9 +3,6 @@ project(${CMAKE_PROJECT_NAME}-test)
 
 set(THREADS_PREFER_PTHREAD_FLAG ON)
 
-set(CMAKE_INSTALL_RPATH "/usr/local/lib")
-set(CMAKE_INSTALL_RPATH_USE_LINK_PATH TRUE)
-
 find_package(Threads REQUIRED)
         
 #set_source_files_properties(test_libra.cpp PROPERTIES LANGUAGE CXX)
@@ -13,7 +10,7 @@ find_package(Threads REQUIRED)
 add_executable(libra test_libra.cpp)
 
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../common/include)
-link_directories(${CMAKE_CURRENT_LIST_DIR})
+#link_directories(${CMAKE_CURRENT_LIST_DIR})
 
 message( "***** CMAKE_CURRENT_LIST_DIR: ${CMAKE_CURRENT_LIST_DIR}")
 
@@ -36,6 +33,6 @@ message( "***** CMAKE_CURRENT_LIST_DIR: ${CMAKE_CURRENT_LIST_DIR}")
 #message( STATUS "legacy_link : ${legacy_link}")
 
 #target_link_libraries(common "crypto")
-target_link_libraries(libra Threads::Threads common)
+target_link_libraries(libra Threads::Threads common ${CMAKE_CURRENT_LIST_DIR}/libcrypto.so)
 
 #install(TARGETS libra install_legacy DESTINATION bin)
